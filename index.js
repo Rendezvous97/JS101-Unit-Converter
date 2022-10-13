@@ -27,6 +27,12 @@ function unitConverter(unit){
     return caption
 }
 
+function convertUnit(unit1, unit2, multiplier){
+    const conversionOne = (inputValue.value * multiplier).toFixed(3)
+    const conversionTwo = (inputValue.value / multiplier).toFixed(3)
+    const caption = `${inputValue.value} ${unit1} = ${kilosToPounds} ${unit2} | 
+    ${inputValue.value} ${unit2} = ${poundsToKilos} ${unit1}`
+}
 
 convertBtn.addEventListener("click", function(){
     lengthOutput.textContent = unitConverter("length")
