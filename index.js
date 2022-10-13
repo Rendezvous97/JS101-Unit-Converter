@@ -27,19 +27,33 @@ function unitConverter(unit){
     return caption
 }
 
-function convertUnit(unit1, unit2, multiplier){
+convertBtn.addEventListener("click", function(){
+    lengthOutput.textContent = unitConverter("length")
+    volumeOutput.textContent = unitConverter("volume")
+    massOutput.textContent = unitConverter("mass")
+    
+    inputValue.value = ""
+})
+
+
+
+
+function convertUnit(unit1, unit2, multiplier, id){
     const conversionOne = (inputValue.value * multiplier).toFixed(3)
     const conversionTwo = (inputValue.value / multiplier).toFixed(3)
     const caption = `${inputValue.value} ${unit1} = ${conversionOne} ${unit2} | 
     ${inputValue.value} ${unit2} = ${conversionTwo} ${unit1}`
 
-    return caption
+    displayUnit(caption, id)
+}
+
+function displayUnit(caption, id){
+    let unitOutput = document.getElementById(id)
+    unitOutput.textContent = caption
 }
 
 convertBtn.addEventListener("click", function(){
-    lengthOutput.textContent = unitConverter("length")
-    volumeOutput.textContent = unitConverter("volume")
-    massOutput.textContent = unitConverter("mass")
+    convertUnit("")
     
     inputValue.value = ""
 })
