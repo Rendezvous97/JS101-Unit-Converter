@@ -4,27 +4,6 @@ let massOutput = document.getElementById("mass-output")
 const convertBtn = document.getElementById("convert-btn")
 const inputValue = document.getElementById("number-to-convert")
 
-// function lengthConverter(){
-//     const meterToFeet = (inputValue.value*3.281).toFixed(3)
-//     const feetToMeter = (inputValue.value/3.281).toFixed(3)
-//     const lengthCaption = `${inputValue.value} meters = ${meterToFeet} feet | 
-//     ${inputValue.value} feet = ${feetToMeter} meters`
-//     return lengthCaption
-// }
-
-
-// convertBtn.addEventListener("click", function(){
-//     lengthOutput.textContent = lengthConverter()
-
-//     inputValue.value = ""
-// })
-
-
-/*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
-*/
 
 function unitConverter(unit){
     let caption = ""
