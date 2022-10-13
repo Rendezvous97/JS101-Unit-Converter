@@ -32,6 +32,8 @@ function convertUnit(unit1, unit2, multiplier){
     const conversionTwo = (inputValue.value / multiplier).toFixed(3)
     const caption = `${inputValue.value} ${unit1} = ${kilosToPounds} ${unit2} | 
     ${inputValue.value} ${unit2} = ${poundsToKilos} ${unit1}`
+
+    return caption
 }
 
 convertBtn.addEventListener("click", function(){
